@@ -294,3 +294,106 @@ footer{
     width:245px;
   }
 }
+
+
+/* V11.4 HEADER LOGO PROPORTION ONLY
+   Scope is strictly limited to the top navigation logo.
+   Footer logo and every other section remain unchanged. */
+.site-header{
+  overflow:visible;
+}
+
+.nav-wrap{
+  min-height:104px;
+  height:104px;
+}
+
+/* Preserve the complete official logo horizontally.
+   Crop only excess top/bottom whitespace from the source image. */
+.nav-wrap .brand{
+  position:relative;
+  display:block;
+  flex:0 0 455px;
+  width:455px;
+  height:82px;
+  padding:0;
+  margin:0;
+  overflow:hidden;
+}
+
+.nav-wrap .brand img{
+  position:absolute;
+  left:0;
+  top:50%;
+  display:block;
+  width:455px;
+  height:auto;
+  max-width:none;
+  margin:0;
+  object-fit:initial;
+  object-position:initial;
+  transform:translateY(-50%);
+  transform-origin:center center;
+}
+
+/* Tablet */
+@media (max-width:980px){
+  .nav-wrap{
+    min-height:96px;
+    height:96px;
+  }
+
+  .nav-wrap .brand{
+    flex-basis:390px;
+    width:390px;
+    height:72px;
+  }
+
+  .nav-wrap .brand img{
+    width:390px;
+  }
+}
+
+/* Mobile — enlarged to match the requested visual proportion,
+   while retaining the complete symbol and company name. */
+@media (max-width:640px){
+  .nav-wrap{
+    min-height:104px;
+    height:104px;
+    padding-left:18px;
+    padding-right:18px;
+  }
+
+  .nav-wrap .brand{
+    flex-basis:calc(100vw - 165px);
+    width:calc(100vw - 165px);
+    max-width:455px;
+    min-width:300px;
+    height:78px;
+  }
+
+  .nav-wrap .brand img{
+    width:100%;
+  }
+}
+
+/* Narrow phones */
+@media (max-width:430px){
+  .nav-wrap{
+    min-height:98px;
+    height:98px;
+    padding-left:14px;
+    padding-right:14px;
+  }
+
+  .nav-wrap .brand{
+    flex-basis:280px;
+    width:280px;
+    min-width:0;
+    height:70px;
+  }
+
+  .nav-wrap .brand img{
+    width:280px;
+  }
+}
