@@ -501,18 +501,17 @@ footer{
 }
 
 /* =========================================================
-   LANDING HEADER LOGO — FOUR-SIDE WHITESPACE CROP ONLY
-   僅修正頁首 Logo 原圖左右與上下過多留白
-   頁尾 Logo、Footer、Hero、CTA 與其他區塊完全不變
+   LANDING HEADER LOGO — HORIZONTAL CROP ONLY
+   僅裁切左右多餘留白，不裁切上方與下方
+   頁尾 Logo 與其他區塊完全不變
    ========================================================= */
 
-/* Desktop */
 .nav-wrap .brand{
   position:relative;
   display:block;
   flex:0 0 520px;
   width:520px;
-  height:88px;
+  height:96px;
   padding:0;
   margin:0;
   overflow:hidden;
@@ -521,7 +520,7 @@ footer{
 .nav-wrap .brand img{
   position:absolute;
   left:50%;
-  top:50%;
+  top:0;
   display:block;
   width:116%;
   height:auto;
@@ -529,16 +528,16 @@ footer{
   margin:0;
   object-fit:initial;
   object-position:initial;
-  transform:translate(-50%,-50%);
-  transform-origin:center center;
+  transform:translateX(-50%);
+  transform-origin:center top;
 }
 
-/* Tablet */
+/* 平板 */
 @media (max-width:980px){
   .nav-wrap .brand{
     flex-basis:440px;
     width:440px;
-    height:80px;
+    height:88px;
   }
 
   .nav-wrap .brand img{
@@ -546,14 +545,14 @@ footer{
   }
 }
 
-/* Mobile */
+/* 手機 */
 @media (max-width:640px){
   .nav-wrap .brand{
     flex-basis:calc(100vw - 150px);
     width:calc(100vw - 150px);
     min-width:300px;
     max-width:460px;
-    height:78px;
+    height:82px;
   }
 
   .nav-wrap .brand img{
@@ -561,13 +560,13 @@ footer{
   }
 }
 
-/* Narrow phones */
+/* 窄版手機 */
 @media (max-width:430px){
   .nav-wrap .brand{
     flex-basis:292px;
     width:292px;
     min-width:0;
-    height:72px;
+    height:76px;
   }
 
   .nav-wrap .brand img{
