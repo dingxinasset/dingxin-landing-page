@@ -35,7 +35,7 @@
         <a href="#team">顧問團隊</a>
         <a href="#faq">常見問題</a>
       </nav>
-      <a class="button small track-start" href="https://ai.dingxinasset.com.tw/?utm_source=landing&utm_medium=organic&utm_campaign=broad_funnel&utm_content=header">開始免費健檢</a>
+      <a class="button small path-entry" href="#paths">先選情境再開始</a>
     </div>
   </header>
 
@@ -50,7 +50,7 @@
             <span>約 3 分鐘</span><span>免費初步盤點</span><span>不需上傳文件</span><span>個資保密</span>
           </div>
           <div class="hero-actions">
-            <a class="button track-start" href="https://ai.dingxinasset.com.tw/?utm_source=landing&utm_medium=organic&utm_campaign=broad_funnel&utm_content=hero">開始家庭與資產風險健檢</a>
+            <a class="button path-entry" href="#paths">先選情境，開始專屬健檢</a>
             <a class="text-link" href="#paths">先看看我適合哪一類分析 →</a>
           </div>
           <p class="micro">本服務提供初步資訊整理與風險辨識，不構成法律、稅務、投資、保險、會計或信託契約意見。</p>
@@ -95,12 +95,16 @@
       </div>
     </section>
 
-    <section id="paths" class="section tone">
+    <section id="paths" class="section tone" data-intent-zone>
       <div class="container">
-        <div class="section-head centered">
+        <div id="path-guidance" class="section-head centered path-guidance">
           <div class="eyebrow">CHOOSE YOUR PRIORITY</div>
-          <h2>先選一個最關心的方向，AI 會依您的情況深入詢問。</h2>
-          <p>入口保持簡單，分析則依家庭與資產複雜度逐步分流。</p>
+          <h2>先選一個最關心的方向</h2>
+          <p class="path-guidance-highlight">
+            <span class="path-guidance-dot" aria-hidden="true"></span>
+            AI 將依您選擇的情境，自動切換專屬提問路徑
+          </p>
+          <p class="path-guidance-note">選擇後，下方按鈕會同步變成該情境的專屬健檢入口。</p>
         </div>
         <div class="path-grid">
           <button class="path-card active" data-intent="family" data-label="家庭與繼承">
@@ -120,8 +124,12 @@
           </button>
         </div>
         <div class="path-cta">
-          <p>目前選擇：<strong id="selected-label">家庭與繼承</strong></p>
-          <a id="dynamic-cta" class="button track-start" href="https://ai.dingxinasset.com.tw/?utm_source=landing&utm_medium=organic&utm_campaign=broad_funnel&utm_content=family">依此方向開始健檢</a>
+          <div id="selected-intent-feedback" class="selected-intent-feedback" aria-live="polite">
+            <span>目前選擇</span>
+            <strong id="selected-label">家庭與繼承</strong>
+            <p id="selected-guidance">AI 將優先分析婚姻、子女、法定順位、照護與繼承安排。</p>
+          </div>
+          <a id="dynamic-cta" class="button track-start intent-primary-cta" href="https://ai.dingxinasset.com.tw/?intent=family&utm_source=landing&utm_medium=organic&utm_campaign=broad_funnel&utm_content=family">以「家庭與繼承」開始健檢</a>
         </div>
       </div>
     </section>
@@ -164,7 +172,7 @@
             <li>未來 90 天優先行動建議</li>
             <li>建議與律師、會計師、信託機構確認的問題</li>
           </ul>
-          <a class="button secondary track-start" href="https://ai.dingxinasset.com.tw/?utm_source=landing&utm_medium=organic&utm_campaign=broad_funnel&utm_content=report">取得我的 AI 初步報告</a>
+          <a class="button secondary path-entry" href="#paths">選擇情境，取得專屬 AI 報告</a>
         </div>
       </div>
     </section>
@@ -220,7 +228,7 @@
           <h2>先看見風險，再決定工具與下一步。</h2>
           <p>3 分鐘完成家庭與資產初步健檢，取得專屬 AI 風險報告。</p>
         </div>
-        <a class="button track-start" href="https://ai.dingxinasset.com.tw/?utm_source=landing&utm_medium=organic&utm_campaign=broad_funnel&utm_content=final">立即開始免費健檢</a>
+        <a class="button path-entry" href="#paths">先選情境，再開始免費健檢</a>
       </div>
     </section>
   </main>
@@ -233,7 +241,7 @@
     </div>
   </footer>
 
-  <div class="mobile-sticky"><a class="button track-start" href="https://ai.dingxinasset.com.tw/?utm_source=landing&utm_medium=organic&utm_campaign=broad_funnel&utm_content=sticky">開始免費健檢</a></div>
+  <div id="mobile-sticky" class="mobile-sticky"><a id="mobile-sticky-cta" class="button track-start" href="https://ai.dingxinasset.com.tw/?intent=family&utm_source=landing&utm_medium=organic&utm_campaign=broad_funnel&utm_content=family">開始｜家庭與繼承健檢</a></div>
   <script src="script.js"></script>
 </body>
 </html>
