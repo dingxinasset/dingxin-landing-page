@@ -761,7 +761,7 @@ footer{
 .nav-wrap .brand img{
   left:50% !important;
   top:50% !important;
-  width:116% !important;
+  width:100% !important;
   height:auto !important;
   max-width:none !important;
   object-fit:initial !important;
