@@ -749,3 +749,38 @@ footer{
     animation:none;
   }
 }
+
+/* =========================================================
+   PACKAGE B — OFFICIAL BRAND ASSET NORMALIZATION
+   Scope: Landing Header/Footer official assets only.
+   Existing layout, navigation and CTA behavior remain unchanged.
+   ========================================================= */
+
+/* Official horizontal PNG uses a transparent 1672x941 canvas.
+   Keep the existing visual scale but vertically center its artwork. */
+.nav-wrap .brand img{
+  left:50% !important;
+  top:50% !important;
+  width:116% !important;
+  height:auto !important;
+  max-width:none !important;
+  object-fit:initial !important;
+  object-position:initial !important;
+  transform:translate(-50%,-50%) !important;
+  transform-origin:center center !important;
+}
+
+/* Official dark-background logo uses the same 1672x941 canvas.
+   Crop only excess vertical background inside the existing footer box. */
+.footer-grid > img{
+  height:104px !important;
+  object-fit:cover !important;
+  object-position:center center !important;
+}
+
+@media (max-width:760px){
+  .footer-grid > img{
+    height:104px !important;
+    max-height:104px !important;
+  }
+}
